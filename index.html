@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Love ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ff4e8a, #ff9a9e, #fbc2eb);
+    background-size: 300% 300%;
+    animation: bgmove 8s infinite alternate;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    overflow: hidden;
+}
+
+@keyframes bgmove {
+    0% {background-position: 0%;}
+    100% {background-position: 100%;}
+}
+
+/* Floating Hearts */
+.heart {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    animation: float 6s infinite;
+}
+
+@keyframes float {
+    0% {transform: translateY(100vh); opacity:1;}
+    100% {transform: translateY(-10vh); opacity:0;}
+}
+
+img {
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px white;
+    margin-top: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.2);
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 20px;
+    backdrop-filter: blur(10px);
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #ff4e8a;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #ff4e8a;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 Background Music -->
+<audio autoplay loop controls>
+    <source src="love song.mpeg" type="audio/mpeg">
+</audio>
+
+
+<h1>I’m Really Sorry My Love ❤️</h1>
+
+<img src="adhi.jpeg" alt="ADHI&TARA">
+
+<div class="card">
+<p>
+My love… 🥺💕
+I hurt you with my words, and I truly feel sorry for that. Please forgive me.
+It hurts me so much when you don’t talk to me. Your silence breaks my heart.
+
+I love you deeply, and I miss you every moment. 
+You are very important in my life. Your smile is my happiness.
+ I promise I will never hurt you again. Your happiness means everything to me.
+ love you adhi enkuda iru Please lokima always loves you ❤️.
+
+I love you endlessly ❤️
+</p>
+
+<button onclick="alert('love you Adhi ❤️')">
+Forgive Me? 💕
+</button>
+
+</div>
+
+<!-- Floating Hearts Script -->
+<script>
+setInterval(function(){
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 10 + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(function(){
+        heart.remove();
+    },6000);
+},500);
+</script>
+
+</body>
+</html>
